@@ -1,0 +1,204 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="ProjectMCQ.Default" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AxA Exam Preparation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Assets/fontawesome-free-6.1.2-web/css/all.min.css" rel="stylesheet" />
+    <link href="Assets/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Assets/Image for web library/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top text-white" style="background: linear-gradient(to right,#cc2b5e , #753a88)">
+                <div class="container-fluid">
+                    <a class="navbar-brand " href="Index.aspx">
+                        <img src="Assets/Image for web library/reading-ebook-digital-tablet-isolated-white_73174-178.jpg" height="40" width="50" class="d-flex float-start" />
+                        <h5 class="d-sm-none d-md-flex float-end mx-3 mt-2 " style="font-family: forte">AxA Exam Preparations</h5>
+                    </a>
+                    <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsupportedcontent" aria-controls="navbarsupportedcontent" aria-expanded="false" aria-label="Toggle Navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarsupportedcontent">
+                        <ul class="navbar-nav me-auto ms-auto my-2 my-lg-0 ">
+                            <%--<li class="nav-item">
+                                <a class="nav-link active" href="#">Subjects
+                                </a>
+                            </li>
+
+                           <%-- <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-brown fw-bold" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                    <asp:DropDownList class="dropdown-menu" ID="ddlCourse" runat="server" aria-labelledby="navbarDropdown">
+                                    </asp:DropDownList>
+                                </div>
+
+
+                            </li>--%>
+                           <%-- <li class="nav-item"><a class="nav-link">Topics
+                            </a>
+                            </li>--%>
+                        </ul>
+                        <ul class="navbar-nav  me-0 my-2 my-lg-0">
+                            <li class="nav-item">
+                                <asp:LinkButton ID="LinkUserProfile" runat="server" CssClass="nav-link">
+                                    <i class="fa fa-user-circle mx-2"></i>
+                                    <asp:Label ID="lblUser" runat="server" CssClass="form-label">Hello User</asp:Label>
+                                </asp:LinkButton>
+                            </li>
+                            <li class="nav-item">
+                                <asp:LinkButton ID="LinkLogin" runat="server" CssClass="nav-link" OnClick="LinkLogin_Click"><i class="fa fa-sign-in-alt"></i> Sign In</asp:LinkButton>
+                            </li>
+                            <li class="nav-item">
+                                <asp:LinkButton ID="LinkLogOut" runat="server" CssClass="nav-link" OnClick="LinkLogOut_Click"><i class="fa fa-sign-out-alt"></i> LogOut</asp:LinkButton>
+                            </li>
+                            <li class="nav-item">
+                                <asp:LinkButton ID="LinkSignUp" runat="server" CssClass="nav-link" OnClick="LinkSignUp_Click"><i class="fa fa-user-plus"></i>SignUp</asp:LinkButton>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </nav>
+        </header>
+        <div class="container-fluid my-5 py-5">
+            <asp:ContentPlaceHolder ID="Content" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center text-lg-start text-white mt-5" style="background: linear-gradient(to right,#cc2b5e , #753a88)">
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                <!-- Left -->
+                <div class="me-5 d-sm-none ">
+                    <span>Get connected with us on social networks:</span>
+                </div>
+                <!-- Left -->
+
+                <!-- Right -->
+                <div>
+                    <a href="#" class="me-4 text-reset">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="me-4 text-reset">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="me-4 text-reset">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="#" class="me-4 text-reset">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="me-4 text-reset">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="me-4 text-reset">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <!-- Right -->
+            </section>
+            <!-- Section: Social media -->
+
+            <!-- Section: Links  -->
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Content -->
+                            <h5 class=" text-center fw-bold mb-2" style="font-family: Forte">
+                                <i class="fas fa-gem me-3"></i>AxA Exam Preparation
+                            </h5>
+
+                            <br />
+                            <center>
+                                <img src="Assets/Image for web library/Online test-rafiki.png" height="200" width="220" class="d-flex" /></center>
+                            <p class="mt-0">
+                                An online web to Prepare for your exam for your course with mcq patterned questions
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <%--  <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Angular</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">React</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Vue</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Laravel</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->--%>
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                            <p><i class="fas fa-home me-3"></i>Ayodhya</p>
+                            <p>
+                                <i class="fas fa-envelope me-3"></i>
+                                akshatdwivedi59941@gmail.com
+                            </p>
+                            <p><i class="fas fa-phone me-3"></i>9519595778</p>
+                            <p><i class="fas fa-print me-3"></i>9451445835</p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+
+            <!-- Copyright -->
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2022 Copyright:
+    <a class="text-reset fw-bold" href="#">AxA Exam Preparation</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </form>
+    <script src="Assets/Bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
